@@ -1,0 +1,32 @@
+post:
+  description: "TODO: add description"
+  tags: 
+    - "auth"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "/request/auth/refresh-token.yaml"
+  
+  responses:
+    "200":
+      description: "Success"
+      content:
+        application/json:
+          schema:
+            $ref: "/response/auth/refresh-token.yaml"
+
+    "400":
+      description: "Failed"
+      content:
+        application/json:
+          schema:
+            $ref: "/schema/api-err.yaml"
+
+    "500":
+      description: "Internal error"
+      content:
+        application/json:
+          schema:
+            $ref: "/schema/api-err.yaml"

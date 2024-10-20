@@ -1,0 +1,42 @@
+openapi: 3.0.3
+info:
+  title: "Monami Chat API"
+  version: 1.0.0
+
+servers:
+  - url: "https://monami-monami-core-317476-0f9125-193-188-23-12.traefik.me/"
+    description: "API server"
+
+paths:
+  /register:
+    $ref: "/route/auth/register.yaml"
+
+  /login:
+    $ref: "/route/auth/login.yaml"
+
+  /refresh-token:
+    $ref: "/route/auth/refresh-token.yaml"
+
+components:
+  schemas:
+  #models
+    ApiError:
+      $ref: "/schema/api-err.yaml"
+    User:
+      $ref: "/schema/user.yaml"
+  #request/response body 
+  #register
+    RegisterRequest:
+      $ref: "/request/auth/register.yaml"
+    RegisterResponse:
+      $ref: "/response/auth/register.yaml"
+  #login
+    LoginRequest:
+      $ref: "/request/auth/login.yaml"
+    LoginResponse:
+      $ref: "/response/auth/login.yaml"
+  #refresh-token
+    RefershTokenRequest:
+      $ref: "/request/auth/refresh-token.yaml"
+    RefershTokenResponse:
+      $ref: "/response/auth/refresh-token.yaml"

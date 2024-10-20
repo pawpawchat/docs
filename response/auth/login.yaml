@@ -1,0 +1,12 @@
+type: object
+properties:
+  access_token:
+    $ref: "/schema/access-token.yaml"
+  refresh_token:
+    $ref: "/schema/refresh-token.yaml"
+  success:
+    type: boolean
+required:
+  - access_token
+  - refresh_token
+  - success

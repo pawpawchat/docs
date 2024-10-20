@@ -1,0 +1,14 @@
+type: object
+properties:
+  message:
+    type: string
+    example: "error"
+  details:
+    type: string
+    example: "description"
+  success:
+    type: boolean
+    default: "false"
+required:
+  - message
+  - success

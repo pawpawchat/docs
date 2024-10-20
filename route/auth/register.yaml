@@ -1,0 +1,32 @@
+post:
+  description: "New user registration. Returns new user data and api tokens"
+  tags: 
+    - "auth"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "/request/auth/register.yaml"
+
+    required: true
+  responses:
+    "200":
+      description: "Success"
+      content:
+        application/json:
+          schema:
+            $ref: "/response/auth/register.yaml"
+    
+    "400":
+      description: "Failed"
+      content:
+        application/json:
+          schema:
+            $ref: "/schema/api-err.yaml"
+    
+    "500":
+      description: "Internal error"
+      content:
+        application/json:
+          schema:
+            $ref: "/schema/api-err.yaml"

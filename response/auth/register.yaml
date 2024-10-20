@@ -1,0 +1,14 @@
+type: object
+properties:
+  user: 
+    $ref: "/schema/user.yaml"
+  access_token:
+    type: string
+  refresh_token:
+    type: string
+  success:
+    type: boolean
+required:
+  - access_token
+  - refresh_token
+  - success

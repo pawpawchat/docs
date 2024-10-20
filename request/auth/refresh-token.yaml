@@ -1,0 +1,6 @@
+type: object
+properties:
+  refresh_token:
+    $ref: "/schema/refresh-token.yaml"
+required:
+  - refresh_token
